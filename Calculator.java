@@ -7,19 +7,6 @@ import java.util.Scanner;
 
 public class Calculator {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите выражение:");
-        String expression = scanner.nextLine();
-        scanner.close();
-
-        try {
-            double result = calculate(expression);
-            System.out.println("Результат: " + result);
-        } catch (Exception e) {
-            System.out.println("Ошибка: " + e.getMessage());
-        }
-    }
     private static final String OPERATORS = "/*-+";
     private static final Map<Character, Integer> PRECEDENCES = Map.of(
             '*',1,
